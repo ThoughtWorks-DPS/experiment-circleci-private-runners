@@ -103,6 +103,6 @@ If everything worked, you should see the following on your Self-Hosted Runners t
 
 <div align="center">
 	<p>
-		<img alt="example" src="https://raw.githubusercontent.com/ThoughtWorks-DPS/experiment-circleci-private-runners/main/sample-registered-container-agent.png" width=650/>
+		<img alt="example" src="https://raw.githubusercontent.com/ThoughtWorks-DPS/experiment-circleci-private-runners/main/sample-registered-container-agent.png" width=850/>
 	</p>
 </div>
