@@ -107,10 +107,34 @@ If everything worked, you should see something like the following on your Self-H
 	</p>
 </div>
 
+### Create an example pipeline to test self-hosted runner
 
+1. Create .circleci/config.yml with the following contents:
+```yaml
+version: 2.1
 
+jobs:
+  build:
+    docker:
+      - image: cimg/base:current
+    resource_class: <namespace>/<resource-class>
+    steps:
+      - checkout
+      - run: echo "Hi I'm on Runners!"
 
+workflows:
+  build-workflow:
+    jobs:
+      - build
+```
+Use your namespace and resource class. Connect the repo containing the example pipeline to a CircleCI project and start the project building. If everything works as expected, you will see the executor initialize and run on your local cluster, followed by the example pipeline project using the runner to perform the pipeline tasks. The CircleCI project window will look something like this:
 
-
+<div align="center">
+	<p>
+		<img alt="example" src="https://raw.githubusercontent.com/ThoughtWorks-DPS/experiment-circleci-private-runners/main/sample-private-runner-result.png" width=850/>
+	</p>
+</div>
 
 See the [CircleCI documentation](https://circleci.com/docs/container-runner-installation/) for more detailed information including activating SSH login to runners.  
+
+maintainers [notes](maintainers.md)
