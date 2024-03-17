@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:2021.11
+      - image: twdps/circleci-base-image:alpine-stable
     resource_class: twdps/experiment
     steps:
       - checkout
