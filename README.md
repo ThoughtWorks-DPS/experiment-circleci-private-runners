@@ -99,10 +99,18 @@ agent:
 ```bash
 helm install container-agent container-agent/container-agent -n circleci -f values.yaml
 ```
-If everything worked, you should see the following on your Self-Hosted Runners tab in CircleCI.  
+If everything worked, you should see something like the following on your Self-Hosted Runners tab in CircleCI.  
 
 <div align="center">
 	<p>
 		<img alt="example" src="https://raw.githubusercontent.com/ThoughtWorks-DPS/experiment-circleci-private-runners/main/sample-registered-container-agent.png" width=850/>
 	</p>
 </div>
+
+
+
+
+
+
+
+See the [CircleCI documentation](https://circleci.com/docs/container-runner-installation/) for more detailed information including activating SSH login to runners.  
